@@ -9,7 +9,7 @@
     integrity="sha512-***********" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
   <title>TMR X Hub</title>
   <style>
-    /* Default styles */
+    /* Default styles */     
     * {
       margin: 0;
       padding: 0;
@@ -79,13 +79,35 @@
       left: 20%;
     }
 
+    /* Additional styles for the image */
+    .centered-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 250px; /* Adjust the max-width as needed */      
+      border-radius: 50%; 
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 255, 166, 0.8); 
+      position: relative;
+      transition: transform 0.3s ease, filter 0.3s ease; /* Mantén la transición */ 
+    }
+
+    .centered-image img {
+      width: 100%;
+      height: auto;
+    }
+
+     .centered-image:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(0, 255, 166, 0.8));
+       transition: transform 0.3s ease, filter 0.3s ease;     
+    }
 
   </style> 
 </head>
 
 <body>
   <div class="background-decor" id="decor-container"></div> 
-  <h1>Takemodzz </h1>
+    <img class="centered-image" src="https://cdn.discordapp.com/attachments/1128201438389092405/1145061867694346401/600999ffe262857c330804527d8cfb6c.jpg" alt="">    
   <script> 
 
     // Easter Egg (Secret lol) 
@@ -118,7 +140,9 @@
     for (let i = 0; i < numberOfCircles; i++) {
       createRandomCircle();
     }
+      // Add the hash to the URL when the page loads
+    window.location.hash = "dev";  
   </script>
 </body>
 
-</html> 
+</html>    
